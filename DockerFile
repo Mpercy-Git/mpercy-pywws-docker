@@ -5,7 +5,7 @@ LABEL maintainer "Mpercy <percym2@gmail.com>"
 RUN \
     dnf install --assumeyes python-pip gnuplot \
     && \
-    pip install --upgrade libusb1 python-twitter \
+    pip install --upgrade libusb1 \
     && \
     pip install --pre pywws \
     && \
