@@ -1,0 +1,15 @@
+FROM debian
+
+LABEL maintainer "Mpercy <percym2@gmail.com>"
+
+RUN \
+    dnf install --assumeyes python-pip gnuplot \
+    && \
+    pip install --upgrade libusb1 python-twitter \
+    && \
+    pip install --pre pywws \
+    && \
+    dnf clean all
+
+#Verify pywws is installed
+RUN pywws-version
